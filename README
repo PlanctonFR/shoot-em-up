@@ -6,7 +6,7 @@
 ¦¦ LICENSE:                                                                            ¦¦
 ¦+-------------------------------------------------------------------------------------+¦
 ¦¦    Program:                                                                         ¦¦
-¦¦	                                  ¦¦
+¦¦                                                                                     ¦¦
 ¦¦    shoot-em-up is a new "manic shooter" game, coded in C, with the use              ¦¦
 ¦¦    of SDL and FMOD Ex libraries.                                                    ¦¦
 ¦¦    Copyright (C) 2013  Victor Bouvier-Deleau                                        ¦¦
