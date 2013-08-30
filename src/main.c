@@ -49,21 +49,15 @@ int main(int argc, char *argv[])
 
     srand((unsigned int)time(0));
 
-    /* Create the main surface */
+    /* Initialize the librairies */
 
     SDL_Surface *screen = NULL;
-
-    /* Create the main fonts */
 
     TTF_Font *fontTitle = NULL;
     TTF_Font *fontText = NULL;
 
-    /* Create the audio system object */
-
     FMOD_SYSTEM *system;
     FMOD_System_Create(&system);
-
-    /* Initialize the libraries */
 
     if(SDL_Init(SDL_INIT_VIDEO) < 0)
     {

@@ -1,110 +1,110 @@
       +-----------------------------------------------------------------------------+
-      ¦                                 shoot-em-up                                 ¦
+      |                                 shoot-em-up                                 |
       +-----------------------------------------------------------------------------+
  +-------------+         +---------------------------------------+         +-------------+
  ++            +---------+---------------------------------------+---------+            ++
- ¦¦ LICENSE:                                                                            ¦¦
- ¦+---==========------------------------------------------------------------------------+¦
- ¦¦    Program:                                                                         ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦    shoot-em-up is a new "manic shooter" game, coded in C, with the use              ¦¦
- ¦¦    of SDL and FMOD Ex libraries.                                                    ¦¦
- ¦¦    Copyright (C) 2013  Victor Bouvier-Deleau                                        ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦    This program is free software: you can redistribute it and/or modify             ¦¦
- ¦¦    it under the terms of the GNU General Public License as published by             ¦¦
- ¦¦    the Free Software Foundation, either version 3 of the License, or                ¦¦
- ¦¦    (at your option) any later version.                                              ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦    This program is distributed in the hope that it will be useful,                  ¦¦
- ¦¦    but WITHOUT ANY WARRANTY; without even the implied warranty of                   ¦¦
- ¦¦    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                     ¦¦
- ¦¦    GNU General Public License for more details.                                     ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦    You should have received a copy of the GNU General Public License                ¦¦
- ¦¦    along with this program. If not, see <http://www.gnu.org/licenses/>.             ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦    You can contact the author by e-mail at victor.bouvierdeleau@gmail.com.          ¦¦
- ¦¦                                                                                     ¦¦
- ¦+---=================-----------------------------------------------------------------+¦
- ¦¦    Graphic engine:                                                                  ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦    SDL 1.2 is available under the GNU Lesser General Public License.                ¦¦
- ¦¦    See <http://www.libsdl.org/license.php> for more details.                        ¦¦
- ¦¦                                                                                     ¦¦
- ¦+---===============-------------------------------------------------------------------+¦
- ¦¦    Audio engine:                                                                    ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦    FMOD Sound System, copyright (C) Firelight Technologies Pty, Ltd., 1994-2013.    ¦¦
- ¦¦    See <http://www.fmod.org/fmod-sales.html> for more details.                      ¦¦
- ¦¦                                                                                     ¦¦
- ¦+---=============---------------------------------------------------------------------+¦
- ¦¦    Ressrouces:                                                                      ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦       Sprites:                                                                      ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦       Sprites are licensed under a Creative Commons BY-NC-SA 3.0 Unported License.  ¦¦
- ¦¦       See <http://creativecommons.org/licenses/by-nc-sa/3.0/> for more details.     ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦       Sounds:                                                                       ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦       None. (WIP)                                                                   ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦       Musics:                                                                       ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦       None. (WIP)                                                                   ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦       Font:                                                                         ¦¦
- ¦¦                                                                                     ¦¦
- ¦¦       Font is available under the Typodermic Fonts Inc. License.                    ¦¦
- ¦¦       See <http://typodermicfonts.com/license/> for more details.                   ¦¦
- ¦¦                                                                                     ¦¦
+ || LICENSE:                                                                            ||
+ |+---==========------------------------------------------------------------------------+|
+ ||    Program:                                                                         ||
+ ||                                                                                     ||
+ ||    shoot-em-up is a new "manic shooter" game, coded in C, with the use              ||
+ ||    of SDL and FMOD Ex libraries.                                                    ||
+ ||    Copyright (C) 2013  Victor Bouvier-Deleau                                        ||
+ ||                                                                                     ||
+ ||    This program is free software: you can redistribute it and/or modify             ||
+ ||    it under the terms of the GNU General Public License as published by             ||
+ ||    the Free Software Foundation, either version 3 of the License, or                ||
+ ||    (at your option) any later version.                                              ||
+ ||                                                                                     ||
+ ||    This program is distributed in the hope that it will be useful,                  ||
+ ||    but WITHOUT ANY WARRANTY; without even the implied warranty of                   ||
+ ||    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                     ||
+ ||    GNU General Public License for more details.                                     ||
+ ||                                                                                     ||
+ ||    You should have received a copy of the GNU General Public License                ||
+ ||    along with this program. If not, see <http://www.gnu.org/licenses/>.             ||
+ ||                                                                                     ||
+ ||    You can contact the author by e-mail at victor.bouvierdeleau@gmail.com.          ||
+ ||                                                                                     ||
+ |+---=================-----------------------------------------------------------------+|
+ ||    Graphic engine:                                                                  ||
+ ||                                                                                     ||
+ ||    SDL 1.2 is available under the GNU Lesser General Public License.                ||
+ ||    See <http://www.libsdl.org/license.php> for more details.                        ||
+ ||                                                                                     ||
+ |+---===============-------------------------------------------------------------------+|
+ ||    Audio engine:                                                                    ||
+ ||                                                                                     ||
+ ||    FMOD Sound System, copyright (C) Firelight Technologies Pty, Ltd., 1994-2013.    ||
+ ||    See <http://www.fmod.org/fmod-sales.html> for more details.                      ||
+ ||                                                                                     ||
+ |+---=============---------------------------------------------------------------------+|
+ ||    Ressrouces:                                                                      ||
+ ||                                                                                     ||
+ ||       Sprites:                                                                      ||
+ ||                                                                                     ||
+ ||       Sprites are licensed under a Creative Commons BY-NC-SA 3.0 Unported License.  ||
+ ||       See <http://creativecommons.org/licenses/by-nc-sa/3.0/> for more details.     ||
+ ||                                                                                     ||
+ ||       Sounds:                                                                       ||
+ ||                                                                                     ||
+ ||       None. (WIP)                                                                   ||
+ ||                                                                                     ||
+ ||       Musics:                                                                       ||
+ ||                                                                                     ||
+ ||       None. (WIP)                                                                   ||
+ ||                                                                                     ||
+ ||       Font:                                                                         ||
+ ||                                                                                     ||
+ ||       Font is available under the Typodermic Fonts Inc. License.                    ||
+ ||       See <http://typodermicfonts.com/license/> for more details.                   ||
+ ||                                                                                     ||
  ++-------------------------------------------------------------------------------------++
  +++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +++
   +-------------------+                                             +-------------------+
  +--------------------+                                             +--------------------+
  ++                                                                                     ++
- ¦¦ CONTROLS:                                                                           ¦¦
- ¦+---=======---------------------------------------------------------------------------+¦
- ¦¦    Menu:                                                                            ¦¦
- ¦¦    <enter> Choose item                                                              ¦¦
- ¦¦    <top arrow> Select item                                                          ¦¦
- ¦¦    <bottom arrow> Select item                                                       ¦¦
- ¦¦    <left arrow> Select item                                                         ¦¦
- ¦¦    <right arrow> Select item                                                        ¦¦
- ¦¦    <escape> Quit the game                                                           ¦¦
- ¦¦                                                                                     ¦¦
- ¦+---==========------------------------------------------------------------------------+¦
- ¦¦    In game:                                                                         ¦¦
- ¦¦    <space> Fire                                                                     ¦¦
- ¦¦    <shift> IEM (Not available, WIP)                                                 ¦¦
- ¦¦    <top arrow> Move up                                                              ¦¦
- ¦¦    <bottom arrow> Move down                                                         ¦¦
- ¦¦    <left arrow> Move left                                                           ¦¦
- ¦¦    <right arrow> Move right                                                         ¦¦
- ¦¦    <escape> Pause the game                                                          ¦¦
- ¦¦                                                                                     ¦¦
+ || CONTROLS:                                                                           ||
+ |+---=======---------------------------------------------------------------------------+|
+ ||    Menu:                                                                            ||
+ ||    <enter> Choose item                                                              ||
+ ||    <top arrow> Select item                                                          ||
+ ||    <bottom arrow> Select item                                                       ||
+ ||    <left arrow> Select item                                                         ||
+ ||    <right arrow> Select item                                                        ||
+ ||    <escape> Quit the game                                                           ||
+ ||                                                                                     ||
+ |+---==========------------------------------------------------------------------------+|
+ ||    In game:                                                                         ||
+ ||    <space> Fire                                                                     ||
+ ||    <shift> IEM (Not available, WIP)                                                 ||
+ ||    <top arrow> Move up                                                              ||
+ ||    <bottom arrow> Move down                                                         ||
+ ||    <left arrow> Move left                                                           ||
+ ||    <right arrow> Move right                                                         ||
+ ||    <escape> Pause the game                                                          ||
+ ||                                                                                     ||
  +-------------------------------------------------------------------------------------++
  +++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +++
   +-------------------+                                             +-------------------+
  +--------------------+                                             +--------------------+
  ++                                                                                     ++
- ¦¦ CREDITS:                                                                            ¦¦
- ¦¦    Game developer : Victor Bouvier-Deleau                                           ¦¦
- ¦¦    Sprites : Victor Bouvier-Deleau                                                  ¦¦
- ¦¦    Sounds : None.                                                                   ¦¦
- ¦¦    Musics : None.                                                                   ¦¦
- ¦¦    Font : Xirod by Typodermic Fonts Inc.                                            ¦¦
- ¦¦                                                                                     ¦¦
+ || CREDITS:                                                                            ||
+ ||    Game developer : Victor Bouvier-Deleau                                           ||
+ ||    Sprites : Victor Bouvier-Deleau                                                  ||
+ ||    Sounds : None.                                                                   ||
+ ||    Musics : None.                                                                   ||
+ ||    Font : Xirod by Typodermic Fonts Inc.                                            ||
+ ||                                                                                     ||
  ++-------------------------------------------------------------------------------------++
  +++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +++
   +-------------------------------------------------------------------------------------+
  +-------------+         +---------------------------------------+         +-------------+
  ++            +---------+---------------------------------------+---------+            ++
- ¦¦   +-----------------------------------------------------------------------------+   ¦¦
- ¦¦   ¦                                 NFO Creator                                 ¦   ¦¦
- ¦¦   +-----------------------------------------------------------------------------+   ¦¦
- ¦¦                           http://cyberleadingcorp.free.fr                           ¦¦
+ ||   +-----------------------------------------------------------------------------+   ||
+ ||   |                                 NFO Creator                                 |   ||
+ ||   +-----------------------------------------------------------------------------+   ||
+ ||                           http://cyberleadingcorp.free.fr                           ||
  ++-------------------------------------------------------------------------------------++
  +++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +++
   +-------------------------------------------------------------------------------------+
