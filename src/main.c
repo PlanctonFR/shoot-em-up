@@ -89,7 +89,8 @@ int main(int argc, char** argv)
     /* Create the window */
 
     window = SDL_CreateWindow("shoot-em-up_Alpha0.01", SDL_WINDOWPOS_CENTERED,
-                              SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
+                              SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH,
+                              WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
     if(window == NULL)
     {
         fprintf(stderr, "Couldn't create a %d x %d window: %s\n", WINDOW_WIDTH,
