@@ -21,7 +21,8 @@
 
     By Victor Bouvier-Deleau (PlanctonFR).
 
-    Role: initializing the SDL and FMOD Ex libraries and launching the game menu.
+    Role: initializing the SDL and FMOD Ex libraries and launching the game
+    menu.
 */
 
 /* MinGW32 ============================================================= */
