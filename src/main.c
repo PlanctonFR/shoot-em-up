@@ -30,10 +30,9 @@
 #include <time.h>
 
 /* SDL ================================================================= */
-#include <SDL/SDL.h>
-#include <SDL/SDL_getenv.h>
-#include <SDL/SDL_image.h>
-#include <SDL/SDL_ttf.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 
 /* FMOD Ex ============================================================= */
 #include <FMODEx/fmod.h>
@@ -41,7 +40,7 @@
 /* Project ============================================================= */
 #include "../inc/global.h"
 
-int main(int argc, char *argv[])
+int main(int argc, char** argv)
 {
     /* INITIALIZATIONS ===================================================== */
 
@@ -51,7 +50,7 @@ int main(int argc, char *argv[])
 
     /* Initialize the librairies */
 
-    SDL_Surface *screen = NULL;
+    SDL_Window *window = NULL;
 
     TTF_Font *fontTitle = NULL;
     TTF_Font *fontText = NULL;
@@ -73,21 +72,15 @@ int main(int argc, char *argv[])
 
     FMOD_System_Init(system, MAX_SOUND_CHANNELS, FMOD_INIT_NORMAL, NULL);
 
-    /* Center the window */
-
-    putenv("SDL_VIDEO_WINDOW_POS=center");
-
     /* Set the window icon */
-
-    SDL_WM_SetIcon(IMG_Load("res/icon/icon.png"), NULL);
 
     /* Open the display device */
 
-    screen = SDL_SetVideoMode(WINDOW_WIDTH, WINDOW_HEIGHT, COLOR_DEPTH,
-                               SDL_HWSURFACE | SDL_DOUBLEBUF);
-    if(screen == NULL)
+    window = SDL_CreateWindow("shoot-em-up_Alpha0.01", SDL_WINDOWPOS_CENTERED,
+                              SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
+    if(window == NULL)
     {
-        fprintf(stderr, "Couldn't set %d x %d video mode: %s\n", WINDOW_WIDTH,
+        fprintf(stderr, "Couldn't create a %d x %d window: %s\n", WINDOW_WIDTH,
                 WINDOW_HEIGHT, SDL_GetError());
         exit(EXIT_FAILURE);
     }
@@ -97,13 +90,10 @@ int main(int argc, char *argv[])
     fontTitle = TTF_OpenFont("res/font/xirod.ttf", FONT_TITLE_SIZE);
     fontText = TTF_OpenFont("res/font/xirod.ttf", FONT_TEXT_SIZE);
 
-    /* Set the window name */
-
-    SDL_WM_SetCaption("shoot-em-up-Alpha0.01", "shoot-em-up");
-
     /* LAUNCH THE GAME ===================================================== */
 
-    intro(screen);
+    SDL_Delay(3000);
+    //intro(screen);
 
     /* QUIT THE GAME ======================================================= */
 
@@ -116,6 +106,7 @@ int main(int argc, char *argv[])
     TTF_CloseFont(fontTitle);
     TTF_Quit();
 
+    SDL_DestroyWindow(window);
     SDL_Quit();
 
     return EXIT_SUCCESS;
