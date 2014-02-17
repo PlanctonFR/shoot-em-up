@@ -55,7 +55,8 @@ int main(int argc, char** argv)
 
     /* Initialize the librairies */
 
-    SDL_Window *window = NULL;
+    SDL_Window *sdlWindow;
+    SDL_Renderer *sdlRenderer;
 
     TTF_Font *fontTitle = NULL;
     TTF_Font *fontText = NULL;
@@ -82,25 +83,39 @@ int main(int argc, char** argv)
     fontTitle = TTF_OpenFont("res/font/xirod.ttf", FONT_TITLE_SIZE);
     fontText = TTF_OpenFont("res/font/xirod.ttf", FONT_TEXT_SIZE);
 
-    /* Set the window icon */
-
-    SDL_SetWindowIcon(window, icon);
-
     /* Create the window */
 
-    window = SDL_CreateWindow("shoot-em-up_Alpha0.01", SDL_WINDOWPOS_CENTERED,
-                              SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH,
-                              WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
-    if(window == NULL)
+    SDL_CreateWindowAndRenderer(WINDOW_WIDTH, WINDOW_HEIGHT,
+                                SDL_WINDOW_FULLSCREEN_DESKTOP, &sdlWindow,
+                                &sdlRenderer);
+
+    if(sdlWindow == NULL || sdlRenderer == NULL)
     {
         fprintf(stderr, "Couldn't create a %d x %d window: %s\n", WINDOW_WIDTH,
                 WINDOW_HEIGHT, SDL_GetError());
         exit(EXIT_FAILURE);
     }
 
+    /* Set the window icon */
+
+    SDL_SetWindowIcon(sdlWindow, icon);
+
+    /* Set the window title */
+
+    SDL_SetWindowTitle(sdlWindow, "shoot-em-up_Alpha-0.02");
+
+    /* Initialising the screen */
+
+    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
+    SDL_RenderSetLogicalSize(sdlRenderer, WINDOW_WIDTH, WINDOW_HEIGHT);
+
+    SDL_SetRenderDrawColor(sdlRenderer, 0, 0, 0, 255);
+    SDL_RenderClear(sdlRenderer);
+    SDL_RenderPresent(sdlRenderer);
+
     /* LAUNCH THE GAME ===================================================== */
 
-    SDL_Delay(3000);
+    SDL_Delay(10000);
     //intro(screen);
 
     /* QUIT THE GAME ======================================================= */
@@ -114,7 +129,7 @@ int main(int argc, char** argv)
     TTF_CloseFont(fontTitle);
     TTF_Quit();
 
-    SDL_DestroyWindow(window);
+    SDL_DestroyWindow(sdlWindow);
     SDL_Quit();
 
     return EXIT_SUCCESS;
