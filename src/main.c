@@ -48,6 +48,10 @@ int main(int argc, char** argv)
 
     srand((unsigned int)time(0));
 
+    /* Charging sprites */
+
+    SDL_Surface *icon = IMG_Load("res/icon/icon.png");
+
     /* Initialize the librairies */
 
     SDL_Window *window = NULL;
@@ -72,9 +76,16 @@ int main(int argc, char** argv)
 
     FMOD_System_Init(system, MAX_SOUND_CHANNELS, FMOD_INIT_NORMAL, NULL);
 
+    /* Load the fonts */
+
+    fontTitle = TTF_OpenFont("res/font/xirod.ttf", FONT_TITLE_SIZE);
+    fontText = TTF_OpenFont("res/font/xirod.ttf", FONT_TEXT_SIZE);
+
     /* Set the window icon */
 
-    /* Open the display device */
+    SDL_SetWindowIcon(window, icon);
+
+    /* Create the window */
 
     window = SDL_CreateWindow("shoot-em-up_Alpha0.01", SDL_WINDOWPOS_CENTERED,
                               SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
@@ -84,11 +95,6 @@ int main(int argc, char** argv)
                 WINDOW_HEIGHT, SDL_GetError());
         exit(EXIT_FAILURE);
     }
-
-    /* Load the fonts */
-
-    fontTitle = TTF_OpenFont("res/font/xirod.ttf", FONT_TITLE_SIZE);
-    fontText = TTF_OpenFont("res/font/xirod.ttf", FONT_TEXT_SIZE);
 
     /* LAUNCH THE GAME ===================================================== */
 
