@@ -21,7 +21,7 @@
  *
  *  By Victor Bouvier-Deleau (PlanctonFR).
  *
- *  Role: seting the window icon.
+ *  Role: setting the window icon.
  */
 
 1 ICON "icon/icon.ico"

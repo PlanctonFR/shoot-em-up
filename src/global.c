@@ -21,5 +21,5 @@
  *
  *  By Victor Bouvier-Deleau (PlanctonFR).
  *
- *  Role:
+ *  Role: Useless...
  */

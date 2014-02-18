@@ -85,9 +85,13 @@ int main(int argc, char** argv)
 
     /* Create the window */
 
-    SDL_CreateWindowAndRenderer(WINDOW_WIDTH, WINDOW_HEIGHT,
-                                SDL_WINDOW_FULLSCREEN_DESKTOP, &sdlWindow,
-                                &sdlRenderer);
+    sdlWindow = SDL_CreateWindow("shoot-em-up_Alpha-0.02",
+                                 SDL_WINDOWPOS_UNDEFINED,
+                                 SDL_WINDOWPOS_UNDEFINED, WINDOW_WIDTH,
+                                 WINDOW_HEIGHT, SDL_WINDOW_FULLSCREEN_DESKTOP);
+
+    sdlRenderer = SDL_CreateRenderer(sdlWindow, -1, SDL_RENDERER_ACCELERATED |
+                                     SDL_RENDERER_PRESENTVSYNC);
 
     if(sdlWindow == NULL || sdlRenderer == NULL)
     {
@@ -99,10 +103,6 @@ int main(int argc, char** argv)
     /* Set the window icon */
 
     SDL_SetWindowIcon(sdlWindow, icon);
-
-    /* Set the window title */
-
-    SDL_SetWindowTitle(sdlWindow, "shoot-em-up_Alpha-0.02");
 
     /* Initialising the screen */
 
